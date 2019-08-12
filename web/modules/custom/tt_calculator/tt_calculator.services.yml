@@ -1,0 +1,8 @@
+services:
+  tt_calculation:
+    class: Drupal\tt_calculator\Calculation
+    arguments: ['@config.factory']
+  tt_submission:
+    class: Drupal\tt_calculator\Submission
+    arguments: ['@database']
+    

@@ -1,0 +1,13 @@
+tt_calculator.calculator_settings:
+  title: 'Calculator settings'
+  description: 'Contains settings for Calculator'
+  route_name: tt_calculator.settings_form
+  parent: system.admin_config
+  weight: 10
+
+tt_calculator.show_submissions:
+  title: 'Show submissions'
+  description: 'Show submissions'
+  route_name: tt_calculator.show_submissions
+  parent: system.admin_config
+  weight: 11

@@ -1,0 +1,5 @@
+name: 'Calculator Common'
+type: module
+description: 'Contains common functionality and tweaks.'
+core: 8.x
+package: 'Calculation'

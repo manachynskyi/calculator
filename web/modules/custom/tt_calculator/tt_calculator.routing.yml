@@ -1,0 +1,15 @@
+tt_calculator.settings_form:
+  path: '/admin/config/calculator-settings'
+  defaults:
+    _form: '\Drupal\tt_calculator\Form\CalculatorSettingsForm'
+    _title: 'Calculator settings'
+  requirements:
+    _role: 'administrator'
+
+tt_calculator.show_submissions:
+  path: '/admin/config/show-submissions'
+  defaults:
+    _controller: '\Drupal\tt_calculator\Controller\ShowSubmissionsController::showSubmissions'
+    _title: 'Calculator settings'
+  requirements:
+    _role: 'administrator'
