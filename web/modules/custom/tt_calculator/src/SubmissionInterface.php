@@ -16,4 +16,5 @@ interface SubmissionInterface {
    * @return void
    */
   public function addSubmission($name, $total_price);
+
 }

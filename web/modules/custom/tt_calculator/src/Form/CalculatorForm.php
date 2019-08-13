@@ -72,7 +72,7 @@ class CalculatorForm extends FormBase {
       '#title' => $this->t('Age'),
       '#options' => $this->calculation::AGE,
       '#ajax' => [
-        'callback' => '::generate_total_price_callback',
+        'callback' => '::generateTotalPriceCallback',
         'wrapper' => 'total-price',
         'event' => 'change',
         'method' => 'replace',
@@ -84,7 +84,7 @@ class CalculatorForm extends FormBase {
       '#title' => $this->t('Car size'),
       '#options' => $this->calculation::CAR_SIZE,
       '#ajax' => [
-        'callback' => '::generate_total_price_callback',
+        'callback' => '::generateTotalPriceCallback',
         'wrapper' => 'total-price',
         'event' => 'change',
         'method' => 'replace',
@@ -112,14 +112,14 @@ class CalculatorForm extends FormBase {
   /**
    * Ajax callback for updating total price field.
    */
-  public function generate_total_price_callback(array $form, FormStateInterface $form_state) {
+  public function generateTotalPriceCallback(array $form, FormStateInterface $form_state) {
     $values = $form_state->getValues();
     if ($values['age'] == 0) {
       $form['total_price']['#value'] = $this->t('You must be at least 20 years old');
     }
     else {
       $form['total_price']['#value'] = '$' . $this->calculation
-        ->getTotalPrice($values['age'],$values['car_size']);;
+        ->getTotalPrice($values['age'], $values['car_size']);;
     }
     return $form['total_price'];
   }
@@ -140,4 +140,5 @@ class CalculatorForm extends FormBase {
       $form_state->setErrorByName('age', $this->t('You must be at least 20 years old'));
     }
   }
+
 }

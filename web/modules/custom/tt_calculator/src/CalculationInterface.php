@@ -46,10 +46,11 @@ interface CalculationInterface {
   /**
    * Calculates total price, based on user input.
    *
-   * @param integer $age
+   * @param int $age
    * @param string $car_size
    *
-   * @return integer
+   * @return int
    */
   public function getTotalPrice($age, $car_size);
+
 }

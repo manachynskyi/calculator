@@ -1,0 +1,20 @@
+uuid: 1b149d25-3a43-4fa5-aec6-b1ac0825fc0b
+langcode: en
+status: true
+dependencies:
+  module:
+    - tt_calculator
+  theme:
+    - bartik
+id: calculatorblock
+theme: bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: calculator_block
+settings:
+  id: calculator_block
+  label: 'Calculator block'
+  provider: tt_calculator
+  label_display: visible
+visibility: {  }

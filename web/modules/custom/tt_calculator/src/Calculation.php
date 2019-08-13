@@ -25,6 +25,7 @@ class Calculation implements CalculationInterface {
   public function __construct(ConfigFactoryInterface $config_factory) {
     $this->configFactory = $config_factory;
   }
+
   /**
    * {@inheritdoc}
    */
@@ -38,4 +39,5 @@ class Calculation implements CalculationInterface {
 
     return round($total_price);
   }
+
 }

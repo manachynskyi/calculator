@@ -29,13 +29,14 @@ class Submission implements SubmissionInterface {
   /**
    * {@inheritdoc}
    */
-  public function addSubmission($name, $total_price){
+  public function addSubmission($name, $total_price) {
     $this->database
       ->insert('calculation_submissions')
       ->fields([
         'name' => $name,
-        'total_price' => $total_price
+        'total_price' => $total_price,
       ])
       ->execute();
   }
+
 }

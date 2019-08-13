@@ -5,4 +5,3 @@ services:
   tt_submission:
     class: Drupal\tt_calculator\Submission
     arguments: ['@database']
-    

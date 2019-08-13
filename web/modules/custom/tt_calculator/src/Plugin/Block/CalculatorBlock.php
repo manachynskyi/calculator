@@ -59,4 +59,5 @@ class CalculatorBlock extends BlockBase implements ContainerFactoryPluginInterfa
   public function build() {
     return $this->formBuilder->getForm('Drupal\tt_calculator\Form\CalculatorForm');
   }
+
 }
